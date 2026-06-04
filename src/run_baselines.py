@@ -2,12 +2,12 @@
 Baseline Training, Evaluation, and Comparative Analysis.
 
 Implements the full comparative study required by the project specification:
-  B1: XGBoost (Tabular Only) — symbolic/rule-based post-processing
-  B2: Neural Tabular Only — metadata encoder + independent heads
-  B3: Neural Image Only — dual image encoder + independent heads
-  B4: Full Neural (No Conservation, No LTN) — multi-modal, no constraints
-  B5: Full Neural (With Conservation, No LTN) — multi-modal, conservation only
-  Main: BiomassLTNModel — full neuro-symbolic approach (loaded from checkpoint)
+  B1: XGBoost (Tabular Only) - symbolic/rule-based post-processing
+  B2: Neural Tabular Only - metadata encoder + independent heads
+  B3: Neural Image Only - dual image encoder + independent heads
+  B4: Full Neural (No Conservation, No LTN) - multi-modal, no constraints
+  B5: Full Neural (With Conservation, No LTN) - multi-modal, conservation only
+  Main: BiomassLTNModel - full neuro-symbolic approach (loaded from checkpoint)
 """
 
 import os
@@ -102,7 +102,7 @@ def train_and_evaluate_xgboost(train_df, val_df, cfg):
 
     model = build_xgboost_baseline(
         random_state=cfg['data'].get('random_seed', 42))
-    print("  Training XGBoost …")
+    print("  Training XGBoost ...")
     model.fit(X_train, y_train)
 
     y_pred_log = model.predict(X_val)
@@ -386,7 +386,7 @@ def _save_comparative_summary(all_results, output_dir):
 
     with open(path, 'w') as f:
         f.write("=" * 90 + "\n")
-        f.write("COMPARATIVE ANALYSIS — Baseline vs Neuro-Symbolic (LTN)\n")
+        f.write("COMPARATIVE ANALYSIS - Baseline vs Neuro-Symbolic (LTN)\n")
         f.write("=" * 90 + "\n\n")
 
         for col in TARGET_COLS:
@@ -420,7 +420,7 @@ def _save_comparative_summary(all_results, output_dir):
                 f.write(row + "\n")
         f.write("\n")
 
-    print(f"\n  Comparative report saved → {path}")
+    print(f"\n  Comparative report saved -> {path}")
 
 
 # ─── Orchestrator ────────────────────────────────────────────────────────────

@@ -1,8 +1,8 @@
 """
-BiomassDataset — Data loading, preprocessing, and collation for LTN biomass prediction.
+BiomassDataset - Data loading, preprocessing, and collation for LTN biomass prediction.
 
 Handles:
-  - Long-to-wide CSV pivot (1785 rows → 357 images × 5 targets)
+  - Long-to-wide CSV pivot (1785 rows -> 357 images x 5 targets)
   - log1p target transformation
   - Height log-transform + StandardScaler on numerics
   - Species/State/Month/Season label encoding
@@ -89,7 +89,7 @@ def load_and_preprocess(csv_path, img_root, cfg):
     """
     df = pd.read_csv(csv_path)
 
-    # ── Pivot long → wide ────────────────────────────────────────────────
+    # ── Pivot long -> wide ────────────────────────────────────────────────
     df_wide = df.pivot_table(
         index=['image_path', 'Sampling_Date', 'State', 'Species',
                'Pre_GSHH_NDVI', 'Height_Ave_cm'],

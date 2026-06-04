@@ -1,5 +1,5 @@
 """
-LTN Predicates module — Pure PyTorch implementation of LTN-style fuzzy predicates.
+LTN Predicates module - Pure PyTorch implementation of LTN-style fuzzy predicates.
 
 All predicates use sigmoid-based fuzzy logic with temperature-controlled
 sharpness (tau). The satisfiability of each predicate is a differentiable

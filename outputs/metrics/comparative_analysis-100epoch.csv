@@ -1,0 +1,151 @@
+Model,Target,Metric,Value
+B1: XGBoost (Tabular + Rules),Dry_Clover_g,RMSE,6.668491863339377
+B1: XGBoost (Tabular + Rules),Dry_Clover_g,MAE,3.5143002807938393
+B1: XGBoost (Tabular + Rules),Dry_Clover_g,R2,0.6417549992662165
+B1: XGBoost (Tabular + Rules),Dry_Clover_g,MAPE,74.4825426023523
+B1: XGBoost (Tabular + Rules),Dry_Dead_g,RMSE,11.241246703746905
+B1: XGBoost (Tabular + Rules),Dry_Dead_g,MAE,6.018244212767317
+B1: XGBoost (Tabular + Rules),Dry_Dead_g,R2,0.3127554880225827
+B1: XGBoost (Tabular + Rules),Dry_Dead_g,MAPE,73.63916559621802
+B1: XGBoost (Tabular + Rules),Dry_Green_g,RMSE,16.649065901765564
+B1: XGBoost (Tabular + Rules),Dry_Green_g,MAE,8.077544739719647
+B1: XGBoost (Tabular + Rules),Dry_Green_g,R2,0.6444889617609566
+B1: XGBoost (Tabular + Rules),Dry_Green_g,MAPE,42.070184209733206
+B1: XGBoost (Tabular + Rules),Dry_Total_g,RMSE,21.815212654716436
+B1: XGBoost (Tabular + Rules),Dry_Total_g,MAE,12.487953278414407
+B1: XGBoost (Tabular + Rules),Dry_Total_g,R2,0.49423873381412875
+B1: XGBoost (Tabular + Rules),Dry_Total_g,MAPE,27.795275619807235
+B1: XGBoost (Tabular + Rules),GDM_g,RMSE,13.65701248260874
+B1: XGBoost (Tabular + Rules),GDM_g,MAE,8.963378251881068
+B1: XGBoost (Tabular + Rules),GDM_g,R2,0.7248377675053959
+B1: XGBoost (Tabular + Rules),GDM_g,MAPE,27.087602972754432
+B1: XGBoost (Tabular + Rules),CSR,CSR1_GDM_Conservation,0.1527777761220932
+B1: XGBoost (Tabular + Rules),CSR,CSR2_Total_Conservation,0.1527777761220932
+B1: XGBoost (Tabular + Rules),CSR,CSR3_Clover_LTE_GDM,0.9444444179534912
+B1: XGBoost (Tabular + Rules),CSR,CSR4_Total_GTE_Max,0.75
+B1: XGBoost (Tabular + Rules),CSR,Symbolic_Drift_g,0.0
+B2: Neural Tabular Only,Dry_Clover_g,RMSE,7.466118812561035
+B2: Neural Tabular Only,Dry_Clover_g,MAE,3.6269421577453613
+B2: Neural Tabular Only,Dry_Clover_g,R2,0.5509293079376221
+B2: Neural Tabular Only,Dry_Clover_g,MAPE,53.6700553894043
+B2: Neural Tabular Only,Dry_Dead_g,RMSE,13.656855583190918
+B2: Neural Tabular Only,Dry_Dead_g,MAE,6.918344020843506
+B2: Neural Tabular Only,Dry_Dead_g,R2,-0.014340519905090332
+B2: Neural Tabular Only,Dry_Dead_g,MAPE,49.69303894042969
+B2: Neural Tabular Only,Dry_Green_g,RMSE,28.583932876586914
+B2: Neural Tabular Only,Dry_Green_g,MAE,18.80109977722168
+B2: Neural Tabular Only,Dry_Green_g,R2,-0.04789388179779053
+B2: Neural Tabular Only,Dry_Green_g,MAPE,71.12068176269531
+B2: Neural Tabular Only,Dry_Total_g,RMSE,35.9858283996582
+B2: Neural Tabular Only,Dry_Total_g,MAE,26.8013973236084
+B2: Neural Tabular Only,Dry_Total_g,R2,-0.37622570991516113
+B2: Neural Tabular Only,Dry_Total_g,MAPE,54.45933532714844
+B2: Neural Tabular Only,GDM_g,RMSE,27.526397705078125
+B2: Neural Tabular Only,GDM_g,MAE,19.82318115234375
+B2: Neural Tabular Only,GDM_g,R2,-0.11783111095428467
+B2: Neural Tabular Only,GDM_g,MAPE,51.24310302734375
+B2: Neural Tabular Only,CSR,CSR1_GDM_Conservation,0.4166666567325592
+B2: Neural Tabular Only,CSR,CSR2_Total_Conservation,0.2638888955116272
+B2: Neural Tabular Only,CSR,CSR3_Clover_LTE_GDM,0.9305555820465088
+B2: Neural Tabular Only,CSR,CSR4_Total_GTE_Max,0.8611111044883728
+B2: Neural Tabular Only,CSR,Symbolic_Drift_g,2.8706626892089844
+B3: Neural Image Only,Dry_Clover_g,RMSE,10.101302146911621
+B3: Neural Image Only,Dry_Clover_g,MAE,4.105103492736816
+B3: Neural Image Only,Dry_Clover_g,R2,0.17798513174057007
+B3: Neural Image Only,Dry_Clover_g,MAPE,64.48783111572266
+B3: Neural Image Only,Dry_Dead_g,RMSE,11.576984405517578
+B3: Neural Image Only,Dry_Dead_g,MAE,6.305868625640869
+B3: Neural Image Only,Dry_Dead_g,R2,0.27109116315841675
+B3: Neural Image Only,Dry_Dead_g,MAPE,64.58311462402344
+B3: Neural Image Only,Dry_Green_g,RMSE,29.789976119995117
+B3: Neural Image Only,Dry_Green_g,MAE,15.840517044067383
+B3: Neural Image Only,Dry_Green_g,R2,-0.13818717002868652
+B3: Neural Image Only,Dry_Green_g,MAPE,74.43426513671875
+B3: Neural Image Only,Dry_Total_g,RMSE,36.89146041870117
+B3: Neural Image Only,Dry_Total_g,MAE,22.99867820739746
+B3: Neural Image Only,Dry_Total_g,R2,-0.4463667869567871
+B3: Neural Image Only,Dry_Total_g,MAPE,50.239723205566406
+B3: Neural Image Only,GDM_g,RMSE,29.118221282958984
+B3: Neural Image Only,GDM_g,MAE,18.027482986450195
+B3: Neural Image Only,GDM_g,R2,-0.25085532665252686
+B3: Neural Image Only,GDM_g,MAPE,46.908111572265625
+B3: Neural Image Only,CSR,CSR1_GDM_Conservation,0.2638888955116272
+B3: Neural Image Only,CSR,CSR2_Total_Conservation,0.25
+B3: Neural Image Only,CSR,CSR3_Clover_LTE_GDM,0.9583333134651184
+B3: Neural Image Only,CSR,CSR4_Total_GTE_Max,0.9444444179534912
+B3: Neural Image Only,CSR,Symbolic_Drift_g,4.634898662567139
+B4: Full Neural (No Constraints),Dry_Clover_g,RMSE,4.5053181648254395
+B4: Full Neural (No Constraints),Dry_Clover_g,MAE,2.747853994369507
+B4: Full Neural (No Constraints),Dry_Clover_g,R2,0.8364781141281128
+B4: Full Neural (No Constraints),Dry_Clover_g,MAPE,56.36895751953125
+B4: Full Neural (No Constraints),Dry_Dead_g,RMSE,11.306150436401367
+B4: Full Neural (No Constraints),Dry_Dead_g,MAE,6.218703269958496
+B4: Full Neural (No Constraints),Dry_Dead_g,R2,0.30479663610458374
+B4: Full Neural (No Constraints),Dry_Dead_g,MAPE,68.66985321044922
+B4: Full Neural (No Constraints),Dry_Green_g,RMSE,16.374603271484375
+B4: Full Neural (No Constraints),Dry_Green_g,MAE,8.925060272216797
+B4: Full Neural (No Constraints),Dry_Green_g,R2,0.6561136245727539
+B4: Full Neural (No Constraints),Dry_Green_g,MAPE,51.226539611816406
+B4: Full Neural (No Constraints),Dry_Total_g,RMSE,20.977174758911133
+B4: Full Neural (No Constraints),Dry_Total_g,MAE,13.343552589416504
+B4: Full Neural (No Constraints),Dry_Total_g,R2,0.5323502421379089
+B4: Full Neural (No Constraints),Dry_Total_g,MAPE,29.426597595214844
+B4: Full Neural (No Constraints),GDM_g,RMSE,17.033002853393555
+B4: Full Neural (No Constraints),GDM_g,MAE,9.9345703125
+B4: Full Neural (No Constraints),GDM_g,R2,0.5719841718673706
+B4: Full Neural (No Constraints),GDM_g,MAPE,27.81403923034668
+B4: Full Neural (No Constraints),CSR,CSR1_GDM_Conservation,0.4166666567325592
+B4: Full Neural (No Constraints),CSR,CSR2_Total_Conservation,0.1666666716337204
+B4: Full Neural (No Constraints),CSR,CSR3_Clover_LTE_GDM,0.9444444179534912
+B4: Full Neural (No Constraints),CSR,CSR4_Total_GTE_Max,0.9166666865348816
+B4: Full Neural (No Constraints),CSR,Symbolic_Drift_g,3.7163467407226562
+B5: Full Neural (Conservation Only),Dry_Clover_g,RMSE,7.2889862060546875
+B5: Full Neural (Conservation Only),Dry_Clover_g,MAE,3.4599406719207764
+B5: Full Neural (Conservation Only),Dry_Clover_g,R2,0.5719848275184631
+B5: Full Neural (Conservation Only),Dry_Clover_g,MAPE,61.08945083618164
+B5: Full Neural (Conservation Only),Dry_Dead_g,RMSE,11.567849159240723
+B5: Full Neural (Conservation Only),Dry_Dead_g,MAE,6.234941482543945
+B5: Full Neural (Conservation Only),Dry_Dead_g,R2,0.2722410559654236
+B5: Full Neural (Conservation Only),Dry_Dead_g,MAPE,67.81218719482422
+B5: Full Neural (Conservation Only),Dry_Green_g,RMSE,15.68362045288086
+B5: Full Neural (Conservation Only),Dry_Green_g,MAE,8.694725036621094
+B5: Full Neural (Conservation Only),Dry_Green_g,R2,0.6845242381095886
+B5: Full Neural (Conservation Only),Dry_Green_g,MAPE,64.29561614990234
+B5: Full Neural (Conservation Only),Dry_Total_g,RMSE,22.204544067382812
+B5: Full Neural (Conservation Only),Dry_Total_g,MAE,13.882671356201172
+B5: Full Neural (Conservation Only),Dry_Total_g,R2,0.47602516412734985
+B5: Full Neural (Conservation Only),Dry_Total_g,MAPE,34.60429763793945
+B5: Full Neural (Conservation Only),GDM_g,RMSE,16.920936584472656
+B5: Full Neural (Conservation Only),GDM_g,MAE,10.346996307373047
+B5: Full Neural (Conservation Only),GDM_g,R2,0.5775977373123169
+B5: Full Neural (Conservation Only),GDM_g,MAPE,34.22797775268555
+B5: Full Neural (Conservation Only),CSR,CSR1_GDM_Conservation,1.0
+B5: Full Neural (Conservation Only),CSR,CSR2_Total_Conservation,1.0
+B5: Full Neural (Conservation Only),CSR,CSR3_Clover_LTE_GDM,1.0
+B5: Full Neural (Conservation Only),CSR,CSR4_Total_GTE_Max,1.0
+B5: Full Neural (Conservation Only),CSR,Symbolic_Drift_g,9.139378676081833e-07
+Main: BiomassLTN (Full Neuro-Symbolic),Dry_Clover_g,RMSE,3.1489815711975098
+Main: BiomassLTN (Full Neuro-Symbolic),Dry_Clover_g,MAE,1.8632071018218994
+Main: BiomassLTN (Full Neuro-Symbolic),Dry_Clover_g,R2,0.9201149940490723
+Main: BiomassLTN (Full Neuro-Symbolic),Dry_Clover_g,MAPE,49.86090087890625
+Main: BiomassLTN (Full Neuro-Symbolic),Dry_Dead_g,RMSE,9.5011568069458
+Main: BiomassLTN (Full Neuro-Symbolic),Dry_Dead_g,MAE,4.65833854675293
+Main: BiomassLTN (Full Neuro-Symbolic),Dry_Dead_g,R2,0.5090522766113281
+Main: BiomassLTN (Full Neuro-Symbolic),Dry_Dead_g,MAPE,54.752220153808594
+Main: BiomassLTN (Full Neuro-Symbolic),Dry_Green_g,RMSE,12.186628341674805
+Main: BiomassLTN (Full Neuro-Symbolic),Dry_Green_g,MAE,6.836899757385254
+Main: BiomassLTN (Full Neuro-Symbolic),Dry_Green_g,R2,0.80952388048172
+Main: BiomassLTN (Full Neuro-Symbolic),Dry_Green_g,MAPE,41.81915283203125
+Main: BiomassLTN (Full Neuro-Symbolic),Dry_Total_g,RMSE,16.108179092407227
+Main: BiomassLTN (Full Neuro-Symbolic),Dry_Total_g,MAE,9.958560943603516
+Main: BiomassLTN (Full Neuro-Symbolic),Dry_Total_g,R2,0.7242474555969238
+Main: BiomassLTN (Full Neuro-Symbolic),Dry_Total_g,MAPE,21.901870727539062
+Main: BiomassLTN (Full Neuro-Symbolic),GDM_g,RMSE,12.484198570251465
+Main: BiomassLTN (Full Neuro-Symbolic),GDM_g,MAE,7.259119510650635
+Main: BiomassLTN (Full Neuro-Symbolic),GDM_g,R2,0.770068347454071
+Main: BiomassLTN (Full Neuro-Symbolic),GDM_g,MAPE,20.639123916625977
+Main: BiomassLTN (Full Neuro-Symbolic),CSR,CSR1_GDM_Conservation,1.0
+Main: BiomassLTN (Full Neuro-Symbolic),CSR,CSR2_Total_Conservation,1.0
+Main: BiomassLTN (Full Neuro-Symbolic),CSR,CSR3_Clover_LTE_GDM,1.0
+Main: BiomassLTN (Full Neuro-Symbolic),CSR,CSR4_Total_GTE_Max,1.0
+Main: BiomassLTN (Full Neuro-Symbolic),CSR,Symbolic_Drift_g,8.477105097881577e-07

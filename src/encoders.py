@@ -1,5 +1,5 @@
 """
-Encoders module — Image and Tabular feature extractors.
+Encoders module - Image and Tabular feature extractors.
 """
 
 import torch
@@ -69,7 +69,7 @@ class DualImageEncoder(nn.Module):
             x = layer(x)
 
         x = self.vit_encoder_ln(x)
-        return x[:, 0]                         # [B, 768] — CLS token only
+        return x[:, 0]                         # [B, 768] - CLS token only
 
     def forward(self, x):
         # EfficientNet branch

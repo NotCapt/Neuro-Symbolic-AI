@@ -5,6 +5,12 @@ venv/
 architecture-doc.md
 design-doc.md
 neuro_symbolic_ai.md
+project-insightschatgpt.txt
+project-insightsclaude.txt
+
+# Large data folder containing JPEGs
+data/train/
+
 
 # Notebook generator scripts
 generate_notebook_04.py

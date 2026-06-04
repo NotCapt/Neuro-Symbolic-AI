@@ -1,0 +1,63 @@
+==========================================================================================
+COMPARATIVE ANALYSIS - Baseline vs Neuro-Symbolic (LTN)
+==========================================================================================
+
+--- Dry_Clover_g ---
+Model                                                  RMSE      MAE       R2     MAPE
+------------------------------------------------------------------------------------------
+B1: XGBoost (Tabular + Rules)                        6.6685   3.5143   0.6418    74.48
+B2: Neural Tabular Only                              7.4661   3.6269   0.5509    53.67
+B3: Neural Image Only                               10.1013   4.1051   0.1780    64.49
+B4: Full Neural (No Constraints)                     4.5053   2.7479   0.8365    56.37
+B5: Full Neural (Conservation Only)                  7.2890   3.4599   0.5720    61.09
+Main: BiomassLTN (Full Neuro-Symbolic)               3.1490   1.8632   0.9201    49.86
+
+--- Dry_Dead_g ---
+Model                                                  RMSE      MAE       R2     MAPE
+------------------------------------------------------------------------------------------
+B1: XGBoost (Tabular + Rules)                       11.2412   6.0182   0.3128    73.64
+B2: Neural Tabular Only                             13.6569   6.9183  -0.0143    49.69
+B3: Neural Image Only                               11.5770   6.3059   0.2711    64.58
+B4: Full Neural (No Constraints)                    11.3062   6.2187   0.3048    68.67
+B5: Full Neural (Conservation Only)                 11.5678   6.2349   0.2722    67.81
+Main: BiomassLTN (Full Neuro-Symbolic)               9.5012   4.6583   0.5091    54.75
+
+--- Dry_Green_g ---
+Model                                                  RMSE      MAE       R2     MAPE
+------------------------------------------------------------------------------------------
+B1: XGBoost (Tabular + Rules)                       16.6491   8.0775   0.6445    42.07
+B2: Neural Tabular Only                             28.5839  18.8011  -0.0479    71.12
+B3: Neural Image Only                               29.7900  15.8405  -0.1382    74.43
+B4: Full Neural (No Constraints)                    16.3746   8.9251   0.6561    51.23
+B5: Full Neural (Conservation Only)                 15.6836   8.6947   0.6845    64.30
+Main: BiomassLTN (Full Neuro-Symbolic)              12.1866   6.8369   0.8095    41.82
+
+--- Dry_Total_g ---
+Model                                                  RMSE      MAE       R2     MAPE
+------------------------------------------------------------------------------------------
+B1: XGBoost (Tabular + Rules)                       21.8152  12.4880   0.4942    27.80
+B2: Neural Tabular Only                             35.9858  26.8014  -0.3762    54.46
+B3: Neural Image Only                               36.8915  22.9987  -0.4464    50.24
+B4: Full Neural (No Constraints)                    20.9772  13.3436   0.5324    29.43
+B5: Full Neural (Conservation Only)                 22.2045  13.8827   0.4760    34.60
+Main: BiomassLTN (Full Neuro-Symbolic)              16.1082   9.9586   0.7242    21.90
+
+--- GDM_g ---
+Model                                                  RMSE      MAE       R2     MAPE
+------------------------------------------------------------------------------------------
+B1: XGBoost (Tabular + Rules)                       13.6570   8.9634   0.7248    27.09
+B2: Neural Tabular Only                             27.5264  19.8232  -0.1178    51.24
+B3: Neural Image Only                               29.1182  18.0275  -0.2509    46.91
+B4: Full Neural (No Constraints)                    17.0330   9.9346   0.5720    27.81
+B5: Full Neural (Conservation Only)                 16.9209  10.3470   0.5776    34.23
+Main: BiomassLTN (Full Neuro-Symbolic)              12.4842   7.2591   0.7701    20.64
+
+--- Constraint Satisfaction Rates ---
+Model                                              CSR1_GDM_Conservatio CSR2_Total_Conservat  CSR3_Clover_LTE_GDM   CSR4_Total_GTE_Max     Symbolic_Drift_g
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+B1: XGBoost (Tabular + Rules)                                    0.1528               0.1528               0.9444               0.7500               0.0000
+B2: Neural Tabular Only                                          0.4167               0.2639               0.9306               0.8611               2.8707
+B3: Neural Image Only                                            0.2639               0.2500               0.9583               0.9444               4.6349
+B4: Full Neural (No Constraints)                                 0.4167               0.1667               0.9444               0.9167               3.7163
+B5: Full Neural (Conservation Only)                              1.0000               1.0000               1.0000               1.0000               0.0000
+Main: BiomassLTN (Full Neuro-Symbolic)                           1.0000               1.0000               1.0000               1.0000               0.0000
