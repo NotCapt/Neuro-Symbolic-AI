@@ -419,15 +419,14 @@ The biomass distribution is heavily right-skewed (many low-biomass samples, few 
 
 ---
 
-## Limitations & Future Work
-
-### Current Limitations
+## Limitations 
 
 - **Limited dataset size**: 357 images is relatively small for dual-backbone architectures; results may improve with data augmentation strategies beyond geometric transforms
 - **Baseline training epochs**: Due to CPU training constraints, baselines (B2–B5) were trained for only 3 epochs, which may underrepresent their full potential
 - **No symbolic-only baseline**: A purely symbolic model (making predictions from rules alone without any learning) is not feasible for this regression task, so the comparative analysis covers neural-only and hybrid approaches
 - **Single dataset**: Results are validated on a single pasture biomass dataset from specific Australian regions
 
+<!--
 ### Future Directions
 
 - **Transfer learning to new regions**: Fine-tune on data from different geographies/pasture types
@@ -437,7 +436,7 @@ The biomass distribution is heavily right-skewed (many low-biomass samples, few 
 - **Model distillation**: Compress the dual-backbone architecture for edge deployment
 
 ---
-
+-->
 ## License
 
 This project is developed as part of the AIMS DTU Research Internship 2026.
