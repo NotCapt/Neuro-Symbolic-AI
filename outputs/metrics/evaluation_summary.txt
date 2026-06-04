@@ -1,0 +1,40 @@
+=== Biomass Prediction Evaluation ===
+
+--- Regression Metrics (Original Space) ---
+
+Dry_Clover_g:
+  RMSE: 3.4761
+  MAE: 2.0906
+  R2: 0.9027
+  MAPE: 52.2953
+
+Dry_Dead_g:
+  RMSE: 11.4135
+  MAE: 6.0988
+  R2: 0.2915
+  MAPE: 70.5210
+
+Dry_Green_g:
+  RMSE: 14.3347
+  MAE: 7.7796
+  R2: 0.7365
+  MAPE: 47.4498
+
+Dry_Total_g:
+  RMSE: 19.3328
+  MAE: 11.6411
+  R2: 0.6028
+  MAPE: 28.1798
+
+GDM_g:
+  RMSE: 14.5865
+  MAE: 8.4839
+  R2: 0.6861
+  MAPE: 26.7705
+
+--- Constraint Satisfaction Rates ---
+CSR1_GDM_Conservation: 1.0000
+CSR2_Total_Conservation: 1.0000
+CSR3_Clover_LTE_GDM: 1.0000
+CSR4_Total_GTE_Max: 1.0000
+Symbolic_Drift_g: 0.0000

@@ -1,0 +1,37 @@
+# Virtual environment
+venv/
+
+# Internal docs (not for repo)
+architecture-doc.md
+design-doc.md
+neuro_symbolic_ai.md
+
+# Notebook generator scripts
+generate_notebook_04.py
+generate_notebooks_inline.py
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Model checkpoints (large binary files)
+outputs/checkpoints/*.pt
+
+# Scaler pickle
+outputs/scaler.pkl

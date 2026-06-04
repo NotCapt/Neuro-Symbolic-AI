@@ -1,0 +1,125 @@
+# =============================================================================
+# Neuro-Symbolic Biomass Prediction — Configuration (v2.0)
+# AIMS DTU Research Internship 2026
+# =============================================================================
+
+data:
+  train_csv: data/train.csv
+  img_root: "data"                    # images referenced as train/IDxxx.jpg
+  val_split: 0.20
+  random_seed: 42
+  use_log_targets: true               # DEFAULT — linear is the ablation
+  log_height: true                    # log1p(Height_Ave_cm) before StandardScaler
+
+  # Species structural categories (from EDA)
+  clover_zero_species:
+    - Fescue
+    - Lucerne
+    - Phalaris
+    - Mixed
+  pure_clover_species:
+    - SubcloverLosa
+    - SubcloverDalkeith
+  dead_zero_state:
+    - WA
+
+model:
+  img_encoder:
+    backbone_eff: efficientnet_b0
+    backbone_vit: vit_b_16
+    pretrained: true
+    freeze_eff_blocks: 4              # Freeze first 4 EfficientNet MBConv blocks
+    freeze_vit_pct: 0.75              # Freeze 75% of ViT transformer blocks
+    out_dim: 256                      # Per-encoder output; combined = 512
+    eff_dropout: 0.3
+
+  tabular_encoder:
+    species_emb_dim: 32               # Increased from 16; species is primary ecological prior
+    state_emb_dim: 4
+    month_emb_dim: 8
+    season_emb_dim: 4
+    hidden_dim: 128
+    dropout: 0.2
+
+  fusion:
+    img_dim: 512
+    tab_dim: 128
+    attn_dim: 128
+    hidden_dim: 256
+    dropout: 0.3
+    use_film: true                    # FiLM conditioning + cross-modal attention
+
+  heads:
+    primary:
+      - Dry_Green_g
+      - Dry_Dead_g
+      - Dry_Clover_g
+    derived:
+      - GDM_g
+      - Dry_Total_g
+    hidden_dims: [128, 64]
+    dropout: 0.2
+    use_clover_gate: true             # Two-stage presence gate for Clover head
+    use_heteroscedastic: false        # Research flag; off by default
+
+training:
+  epochs: 15
+  baseline_epochs: 3
+  batch_size: 16
+  patience: 15
+  amp: false                          # Disabled — training on CPU
+
+  curriculum:
+    enabled: true
+    warmup_epochs: 5                 # Full dataset after epoch 5
+
+  optimizer:
+    name: adamw
+    lr_backbone: 1.0e-4
+    lr_other: 3.0e-4
+    weight_decay_backbone: 1.0e-4
+    weight_decay_other: 1.0e-5
+
+  scheduler:
+    name: cosine
+    T_max: 15
+    eta_min: 1.0e-6
+    warmup_epochs: 2
+
+  grad_clip: 1.0
+  num_workers: 0                      # CPU training — avoid multiprocessing overhead
+
+loss:
+  alpha: 1.0                          # Regression loss weight
+  beta_max: 0.5                       # Max LTN loss weight
+  gamma_gate: 0.3                     # Clover gate BCE weight
+  ltn_beta_warmup: 5                  # Epochs to ramp LTN weight
+  huber_delta: 2.4                    # log1p(10) — calibrated for log-space
+
+ltn:
+  p_mean_p: 2
+  predicate_weights:
+    P3:  1.0
+    P4:  1.0
+    P5:  0.2
+    P6:  0.8
+    P7:  0.8
+    P8:  0.8
+    P9:  0.3
+    P10: 0.3
+    P11: 0.2
+  tau:
+    near_exact: 0.5
+    hard: 2.0
+    soft: 5.0
+    very_soft: 10.0
+  tau_anneal_factor: 4.0              # tau_start = tau_end * anneal_factor
+
+evaluation:
+  csr_epsilon: 1.0                    # g tolerance for approximate CSR metrics
+  tsne_perplexity: 15
+  report_drift: true                  # Symbolic drift metric
+
+logging:
+  use_wandb: false                    # Default OFF
+  project: aims-dtu-ltn-biomass-v2

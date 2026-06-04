@@ -1,0 +1,314 @@
+[
+  {
+    "rule_id": "MATH_001",
+    "rule_type": "mathematical",
+    "description": "Dry_Total_g = Dry_Clover_g + Dry_Dead_g + Dry_Green_g",
+    "pseudo_logic": "FORALL x: Dry_Total_g(x) \u2248 Dry_Clover_g(x) + Dry_Dead_g(x) + Dry_Green_g(x)",
+    "constraint_type": "equality",
+    "validation": {
+      "mean_residual": 0.0008784313725502937,
+      "max_residual": 0.30879999999999974,
+      "std_residual": 0.016343440616208276,
+      "violation_rate": 0.0
+    },
+    "ltn_encoding": "soft_constraint",
+    "confidence": "high",
+    "priority": 1,
+    "requirements": [
+      "2.2",
+      "2.7"
+    ]
+  },
+  {
+    "rule_id": "MATH_004",
+    "rule_type": "mathematical",
+    "description": "GDM_g = 0.799 \u00d7 Dry_Total_g + -2.925",
+    "pseudo_logic": "FORALL x: GDM_g(x) \u2248 0.799 * Dry_Total_g(x) + -2.925",
+    "constraint_type": "linear_relationship",
+    "validation": {
+      "r_squared": 0.803607125816123,
+      "p_value": 1.59778273987666e-127,
+      "slope": 0.7987953948986295,
+      "intercept": -2.925473175038846
+    },
+    "ltn_encoding": "soft_constraint",
+    "confidence": "high",
+    "priority": 2,
+    "requirements": [
+      "2.4",
+      "2.7"
+    ]
+  },
+  {
+    "rule_id": "MATH_003",
+    "rule_type": "mathematical",
+    "description": "GDM_g = 0.868 \u00d7 Dry_Green_g + 10.163",
+    "pseudo_logic": "FORALL x: GDM_g(x) \u2248 0.868 * Dry_Green_g(x) + 10.163",
+    "constraint_type": "linear_relationship",
+    "validation": {
+      "r_squared": 0.7819101969245841,
+      "p_value": 1.9381144268178882e-119,
+      "slope": 0.8680551853868375,
+      "intercept": 10.162685378904225
+    },
+    "ltn_encoding": "soft_constraint",
+    "confidence": "high",
+    "priority": 2,
+    "requirements": [
+      "2.4",
+      "2.7"
+    ]
+  },
+  {
+    "rule_id": "MATH_002",
+    "rule_type": "mathematical",
+    "description": "Dry_Total_g = 0.915 \u00d7 Dry_Green_g + 20.963",
+    "pseudo_logic": "FORALL x: Dry_Total_g(x) \u2248 0.915 * Dry_Green_g(x) + 20.963",
+    "constraint_type": "linear_relationship",
+    "validation": {
+      "r_squared": 0.6894222862012327,
+      "p_value": 3.689413362977551e-92,
+      "slope": 0.9147404698423762,
+      "intercept": 20.963385552857265
+    },
+    "ltn_encoding": "soft_constraint",
+    "confidence": "medium",
+    "priority": 2,
+    "requirements": [
+      "2.4",
+      "2.7"
+    ]
+  },
+  {
+    "rule_id": "MATH_010",
+    "rule_type": "mathematical",
+    "description": "GDM strongly correlates with green biomass (R\u00b2=0.782)",
+    "pseudo_logic": "FORALL x: Dry_Green_g(x) \u2248 0.901 * GDM_g(x) + -3.348",
+    "constraint_type": "correlation",
+    "validation": {
+      "r_squared": 0.7819101969245841,
+      "p_value": 1.9381144268178882e-119,
+      "correlation": 0.8842568613952533
+    },
+    "ltn_encoding": "soft_constraint",
+    "confidence": "high",
+    "priority": 2,
+    "requirements": [
+      "2.5",
+      "2.7"
+    ]
+  },
+  {
+    "rule_id": "MATH_011",
+    "rule_type": "mathematical",
+    "description": "GDM correlates with total biomass (R\u00b2=0.804)",
+    "pseudo_logic": "FORALL x: Dry_Total_g(x) \u2248 1.006 * GDM_g(x) + 11.843",
+    "constraint_type": "correlation",
+    "validation": {
+      "r_squared": 0.803607125816123,
+      "p_value": 1.59778273987666e-127,
+      "correlation": 0.8964413677514682
+    },
+    "ltn_encoding": "soft_constraint",
+    "confidence": "high",
+    "priority": 2,
+    "requirements": [
+      "2.5",
+      "2.7"
+    ]
+  },
+  {
+    "rule_id": "SPECIES_020",
+    "rule_type": "species",
+    "description": "Species 'SubcloverLosa' has high clover proportion (mean=1.00)",
+    "pseudo_logic": "FORALL x: Species(x) = 'SubcloverLosa' \u2192 Dry_Clover_g(x) / Dry_Total_g(x) \u2265 0.19",
+    "constraint_type": "threshold",
+    "validation": {
+      "mean_proportion": 1.0,
+      "threshold": 0.19034694131299462,
+      "sample_count": 5
+    },
+    "ltn_encoding": "soft_constraint",
+    "confidence": "high",
+    "priority": 2,
+    "requirements": [
+      "3.3",
+      "3.7"
+    ]
+  },
+  {
+    "rule_id": "SPECIES_021",
+    "rule_type": "species",
+    "description": "Species 'Clover' has high clover proportion (mean=0.70)",
+    "pseudo_logic": "FORALL x: Species(x) = 'Clover' \u2192 Dry_Clover_g(x) / Dry_Total_g(x) \u2265 0.19",
+    "constraint_type": "threshold",
+    "validation": {
+      "mean_proportion": 0.7028377094638941,
+      "threshold": 0.19034694131299462,
+      "sample_count": 41
+    },
+    "ltn_encoding": "soft_constraint",
+    "confidence": "high",
+    "priority": 2,
+    "requirements": [
+      "3.3",
+      "3.7"
+    ]
+  },
+  {
+    "rule_id": "SPECIES_022",
+    "rule_type": "species",
+    "description": "Species 'WhiteClover' has high clover proportion (mean=0.32)",
+    "pseudo_logic": "FORALL x: Species(x) = 'WhiteClover' \u2192 Dry_Clover_g(x) / Dry_Total_g(x) \u2265 0.19",
+    "constraint_type": "threshold",
+    "validation": {
+      "mean_proportion": 0.3216211780668726,
+      "threshold": 0.19034694131299462,
+      "sample_count": 10
+    },
+    "ltn_encoding": "soft_constraint",
+    "confidence": "medium",
+    "priority": 2,
+    "requirements": [
+      "3.3",
+      "3.7"
+    ]
+  },
+  {
+    "rule_id": "SPECIES_023",
+    "rule_type": "species",
+    "description": "Species 'Phalaris_Clover_Ryegrass_Barleygrass_Bromegrass' has high clover proportion (mean=0.19)",
+    "pseudo_logic": "FORALL x: Species(x) = 'Phalaris_Clover_Ryegrass_Barleygrass_Bromegrass' \u2192 Dry_Clover_g(x) / Dry_Total_g(x) \u2265 0.19",
+    "constraint_type": "threshold",
+    "validation": {
+      "mean_proportion": 0.19034694131299462,
+      "threshold": 0.19034694131299462,
+      "sample_count": 7
+    },
+    "ltn_encoding": "soft_constraint",
+    "confidence": "medium",
+    "priority": 2,
+    "requirements": [
+      "3.3",
+      "3.7"
+    ]
+  },
+  {
+    "rule_id": "TEMPORAL_030",
+    "rule_type": "temporal",
+    "description": "Dead biomass proportion peaks in Winter",
+    "pseudo_logic": "FORALL x: season(x) = 'Winter' \u2192 Dry_Dead_g(x) / Dry_Total_g(x) \u2265 0.240",
+    "constraint_type": "seasonal_threshold",
+    "validation": {
+      "season": "Winter",
+      "mean_proportion": 0.3005903778172893,
+      "pattern": "dead_maximization"
+    },
+    "ltn_encoding": "soft_constraint",
+    "confidence": "medium",
+    "priority": 3,
+    "requirements": [
+      "4.6",
+      "4.7"
+    ]
+  },
+  {
+    "rule_id": "TEMPORAL_031",
+    "rule_type": "temporal",
+    "description": "Green biomass proportion peaks in Summer",
+    "pseudo_logic": "FORALL x: season(x) = 'Summer' \u2192 Dry_Green_g(x) / Dry_Total_g(x) \u2265 0.657",
+    "constraint_type": "seasonal_threshold",
+    "validation": {
+      "season": "Summer",
+      "mean_proportion": 0.8208324989669021,
+      "pattern": "green_maximization"
+    },
+    "ltn_encoding": "soft_constraint",
+    "confidence": "medium",
+    "priority": 3,
+    "requirements": [
+      "4.6",
+      "4.7"
+    ]
+  },
+  {
+    "rule_id": "GEO_040",
+    "rule_type": "geographic",
+    "description": "State NSW has NDVI in range [0.34, 0.89]",
+    "pseudo_logic": "FORALL x: State(x) = 'NSW' \u2192 0.340 \u2264 NDVI(x) \u2264 0.890",
+    "constraint_type": "range_constraint",
+    "validation": {
+      "state": "NSW",
+      "mean_ndvi": 0.6564,
+      "min_ndvi": 0.34,
+      "max_ndvi": 0.89
+    },
+    "ltn_encoding": "soft_constraint",
+    "confidence": "medium",
+    "priority": 3,
+    "requirements": [
+      "5.2",
+      "5.7"
+    ]
+  },
+  {
+    "rule_id": "GEO_041",
+    "rule_type": "geographic",
+    "description": "State Tas has NDVI in range [0.19, 0.91]",
+    "pseudo_logic": "FORALL x: State(x) = 'Tas' \u2192 0.190 \u2264 NDVI(x) \u2264 0.910",
+    "constraint_type": "range_constraint",
+    "validation": {
+      "state": "Tas",
+      "mean_ndvi": 0.6273188405797101,
+      "min_ndvi": 0.19,
+      "max_ndvi": 0.91
+    },
+    "ltn_encoding": "soft_constraint",
+    "confidence": "medium",
+    "priority": 3,
+    "requirements": [
+      "5.2",
+      "5.7"
+    ]
+  },
+  {
+    "rule_id": "GEO_042",
+    "rule_type": "geographic",
+    "description": "State Vic has NDVI in range [0.30, 0.87]",
+    "pseudo_logic": "FORALL x: State(x) = 'Vic' \u2192 0.300 \u2264 NDVI(x) \u2264 0.870",
+    "constraint_type": "range_constraint",
+    "validation": {
+      "state": "Vic",
+      "mean_ndvi": 0.7126785714285714,
+      "min_ndvi": 0.3,
+      "max_ndvi": 0.87
+    },
+    "ltn_encoding": "soft_constraint",
+    "confidence": "medium",
+    "priority": 3,
+    "requirements": [
+      "5.2",
+      "5.7"
+    ]
+  },
+  {
+    "rule_id": "GEO_043",
+    "rule_type": "geographic",
+    "description": "State WA has NDVI in range [0.16, 0.81]",
+    "pseudo_logic": "FORALL x: State(x) = 'WA' \u2192 0.160 \u2264 NDVI(x) \u2264 0.810",
+    "constraint_type": "range_constraint",
+    "validation": {
+      "state": "WA",
+      "mean_ndvi": 0.5962500000000001,
+      "min_ndvi": 0.16,
+      "max_ndvi": 0.81
+    },
+    "ltn_encoding": "soft_constraint",
+    "confidence": "medium",
+    "priority": 3,
+    "requirements": [
+      "5.2",
+      "5.7"
+    ]
+  }
+]

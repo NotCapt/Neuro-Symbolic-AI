@@ -1,0 +1,18 @@
+torch>=2.0
+torchvision>=0.15
+ltn>=1.0
+pandas>=1.5
+numpy>=1.23
+scikit-learn>=1.2
+Pillow>=9.0
+matplotlib>=3.6
+seaborn>=0.12
+pyyaml>=6.0
+joblib>=1.2
+tqdm>=4.64
+
+# Optional — baselines
+xgboost>=1.7
+
+# Optional — experiment tracking (default off)
+# wandb>=0.15
