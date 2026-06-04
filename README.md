@@ -1,6 +1,6 @@
-<p align="center">
+<!-- <p align="center">
   <img src="assets/architecture_flowchart.png" alt="BiomassLTN Architecture" width="720"/>
-</p>
+</p> -->
 
 <h1 align="center">🌿 Neuro-Symbolic Biomass Prediction via Logical Tensor Networks</h1>
 
